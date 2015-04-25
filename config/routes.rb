@@ -8,6 +8,10 @@ Rails.application.routes.draw do
   	member do
   		post 'like'
   	end	
-  end	
+  end
+
+  resources :chefs, except: [:new]
+
+  get '/register', to: 'chefs#new'	
 
 end
