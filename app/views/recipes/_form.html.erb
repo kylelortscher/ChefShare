@@ -22,7 +22,7 @@
 			<%= f.label :description %>
 			<%= f.text_area :description, rows: 10 %>
 
-			<%= f.submit 'Create Recipe', class: "btn btn-success" %>
+			<%= f.submit(@recipe.new_record? ? 'Create Recipe' : 'Edit Recipe', class: "btn btn-success") %>
 		<% end %>	
 	</div>	
 </div>	
