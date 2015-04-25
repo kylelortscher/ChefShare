@@ -8,6 +8,8 @@ class Recipe < ActiveRecord::Base
 	validates :name, presence: true, length: { in: 5..100 }
 	validates :summary, presence: true, length: { in: 10..150 }
 	validates :description, presence: true, length: { in: 20..500 }
+	validate :picture_size
+	default_scope -> { order(updated_at: :desc) }
 
 
 	def thumbs_up_total
