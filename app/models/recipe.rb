@@ -1,4 +1,5 @@
 class Recipe < ActiveRecord::Base
+	self.per_page = 4
 	belongs_to :chef
 	has_many :likes
 	mount_uploader :picture, PictureUploader
