@@ -22,4 +22,6 @@ class LoginsController < ApplicationController
 		recirect_to root_path
 	end	
 
+
+	
 end	
