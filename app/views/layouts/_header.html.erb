@@ -6,9 +6,11 @@
 		</div>
 		<div class="nav_item">
 			<%= link_to "link_1", root_path, class:"btn btn-lf btn-warning" %>
-		</div>	
-		<div class="nav_item">
-			<%= link_to "New Recipe", new_recipe_path, class:"btn btn-lf btn-warning" %>
-		</div>		
+		</div>
+		<% if logged_in? %>	
+			<div class="nav_item">
+				<%= link_to "New Recipe", new_recipe_path, class:"btn btn-lf btn-warning" %>
+			</div>
+		<% end %>			
 	</div>	
 </header>	
